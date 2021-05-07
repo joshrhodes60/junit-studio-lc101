@@ -1,6 +1,8 @@
 package main;
 
 
+import javax.management.InvalidAttributeValueException;
+
 public class BalancedBrackets {
     /**
      * The function BalancedBrackets should return true if and only if
@@ -19,9 +21,8 @@ public class BalancedBrackets {
      *   "[LaunchCode", "Launch]Code[", "[", "]["
      *
      * @param str - to be validated
-     * @return true if balanced, false otherwise
      */
-    public static boolean hasBalancedBrackets(String str) {
+    public static boolean hasBalancedBrackets(String str) throws InvalidAttributeValueException {
         int brackets = 0;
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
